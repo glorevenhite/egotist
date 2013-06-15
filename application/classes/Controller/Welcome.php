@@ -4,9 +4,9 @@ class Controller_Welcome extends Controller {
 
 	public function action_index()
 	{
-		$view = View::factory('welcome');		
-		$view->site_name = 'Egotist';
-		$view->random = rand(1,10);
+		$view = View::factory('welcome')
+			->set('site_name','Egotist')
+			->set('random',rand(1,10));
 		$this->response->body($view);		
 	}
 
