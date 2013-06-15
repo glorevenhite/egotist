@@ -1,2 +1,2 @@
-<h1>Welcome to Kohana 3</h1>
-<p>This is the welcome.php view</p>
+<h1>Welcome to <?php echo $site_name; ?></h1>
+<p><?php echo $random; ?> is a number between 1 and 10</p>
