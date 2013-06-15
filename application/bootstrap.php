@@ -57,6 +57,7 @@ spl_autoload_register(array('Kohana', 'auto_load'));
 ini_set('unserialize_callback_func', 'spl_autoload_call');
 
 // -- Configuration and initialization -----------------------------------------
+Kohana::$environment = Kohana::DEVELOPMENT;
 
 /**
  * Set the default language
