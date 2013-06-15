@@ -5,8 +5,12 @@ class Controller_Welcome extends Controller {
 	public function action_index()
 	{
 		$view = View::factory('welcome')
-			->set('site_name','Egotist')
-			->set('random',rand(1,10));
+			->bind('site_name', $site_name)
+			->bind('random', $random);
+		
+		$site_name = 'Egotist';
+		$random = rand(1,10);
+		
 		$this->response->body($view);		
 	}
 
